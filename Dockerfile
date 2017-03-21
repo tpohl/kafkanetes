@@ -5,6 +5,9 @@ RUN mkdir -p $JAVA_DATA_DIR/opt/kafka \
   && curl -s http://www.mirrorservice.org/sites/ftp.apache.org/kafka/0.9.0.1/kafka_2.11-0.9.0.1.tgz | tar -xz --strip-components=1 
 COPY zookeeper-server-start-multiple.sh $JAVA_DATA_DIR/opt/kafka/bin/
 COPY zookeeper.properties $JAVA_DATA_DIR/config/
+USER root
+CMD chown jboss:jboss $JAVA_DATA_DIR/config/zookeeper.properties
+USER jboss
 #RUN chmod -R a=u $JAVA_DATA_DIR/opt/kafka
 WORKDIR $JAVA_DATA_DIR/opt/kafka
 VOLUME /tmp/kafka-logs /tmp/zookeeper
