@@ -4,6 +4,7 @@ PROPERTIES=/deployments/data/tmp/zookeeper.properties
 
 mkdir -p /deployments/data/tmp/zookeeper
 
+echo "# Zookeeper Configuration" > $PROPERTIES
 echo $MYID >/deployments/data/tmp/zookeeper/myid
 for ((i=1; i<=$MAXID; i++)); do
   echo server.$i=$PREFIX-$i:2888:3888
