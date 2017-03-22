@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-PROPERTIES=zookeeper.properties
+PROPERTIES=/deployments/data/tmp/zookeeper.properties
 
 mkdir -p /deployments/data/tmp/zookeeper
 
