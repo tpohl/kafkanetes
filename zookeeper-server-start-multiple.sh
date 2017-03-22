@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
-sleep 100000000000000000
-PROPERTIES=/deployments/data/tmp/zookeeper.properties
+PROPERTIES=/deployments/data/tmp/zookeeper/zookeeper.properties
 
 mkdir -p /deployments/data/tmp/zookeeper
 
