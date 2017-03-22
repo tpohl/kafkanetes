@@ -2,7 +2,6 @@
 
 PROPERTIES=/deployments/data/tmp/zookeeper/zookeeper.properties
 
-mkdir -p logs
 mkdir -p /deployments/data/tmp/zookeeper
 
 echo "# Zookeeper Configuration" > $PROPERTIES
