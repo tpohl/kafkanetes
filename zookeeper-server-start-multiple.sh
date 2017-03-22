@@ -1,9 +1,6 @@
 #!/bin/bash -e
 
-PROPERTIES=$1
-PREFIX=$2
-MYID=$3
-MAXID=$4
+PROPERTIES=zookeeper.properties
 
 mkdir -p /deployments/data/tmp/zookeeper
 
