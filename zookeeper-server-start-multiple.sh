@@ -5,6 +5,8 @@ PREFIX=$2
 MYID=$3
 MAXID=$4
 
+mkdir -p /deployments/data/tmp/zookeeper
+
 echo $MYID >/deployments/data/tmp/zookeeper/myid
 for ((i=1; i<=$MAXID; i++)); do
   echo server.$i=$PREFIX-$i:2888:3888
